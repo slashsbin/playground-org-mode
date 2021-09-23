@@ -4,3 +4,133 @@
 
 
 * Org-Mode Playground
+
+** Metadata
+A.K.A Front formatter which should be rendered at top of the page.
+
+
+** Document Structure
+
+*** Headlines
+
+**** Sub Headline - Level 4
+
+***** Sub Headline - Level 5
+
+****** Sub Headline - Level 6
+
+******* Sub Headline - Level 7
+
+******** Sub Headline - Level 8
+
+*** Visibility
+    :PROPERTIES:
+    :VISIBILITY: folded
+    :END:
+
+Initial visibility is set for this section to ~folded~ via a special custom property.
+
+*** Plain Lists
+
+**** Unordered list
+
+With minus bullets:
+- Item A
+- Item B
+- Item C
+- Item D
+
+With plus bullets:
++ Item A
++ Item B
++ Item C
++ Item D
+
+**** Ordered list
+
+With period:
+1. Item 1
+2. Item 2
+3. Item 3
+4. Item 4
+
+With parenthesis:
+1) Item 1
+2) Item 2
+3) Item 3
+4) Item 4
+
+With alphabets:
+A) Item 1
+B) Item 2
+C) Item 3
+D) Item 4
+
+**** Description list
+
+Unordered list:
+- Item A :: An item that is the 1st
+- Item B :: An item that is the 2nd
+
+*** Drawers
+Still outside the drawer.
+:DRAWERNAME:
+This is inside the drawer.
+:END:
+After the drawer.
+
+*** Blocks
+
+#+begin_center
+Center Block
+#+end_center
+
+#+begin_comment
+Comment Block
+#+end_comment
+
+#+begin_quote
+Quote Block
+#+end_quote
+
+#+begin_verse
+Verse Block
+#+end_verse
+
+
+** Markup for Rich Contents
+
+*** Paragraphs
+
+Paragraphs are separated by at least one empty line.
+
+A paragraph with enforced line \\
+break.
+
+To preserve the line breaks, indentation and blank lines in a region:
+#+BEGIN_VERSE
+ Great clouds overhead
+ Tiny black birds rise and fall
+ Snow covers Emacs
+
+    ---AlexSchroeder
+#+END_VERSE
+
+When quoting a passage from another document:
+#+BEGIN_QUOTE
+Everything should be made as simple as possible,
+but not any simpler ---Albert Einstein
+#+END_QUOTE
+
+If you would like to center some text:
+#+BEGIN_CENTER
+Everything should be made as simple as possible, \\
+but not any simpler
+#+END_CENTER
+
+*** Emphasis and Monospace
+You can make words *bold*, /italic/, _underlined_, =verbatim= and ~code~, and, if you must, +strike-through+.
+
+*** Subscripts and Superscripts
+The radius of the sun is R_sun = 6.96 x 10^8 m.  On the other hand,
+the radius of Alpha Centauri is R_{Alpha Centauri} = 1.28 x R_{sun}.
