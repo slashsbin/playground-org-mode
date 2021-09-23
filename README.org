@@ -1,0 +1,6 @@
+#+TITLE: ORG-MODE Playground
+#+AUTHOR: slashsbin
+#+STARTUP: align
+
+
+* Org-Mode Playground
