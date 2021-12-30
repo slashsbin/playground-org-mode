@@ -1,5 +1,6 @@
 #+TITLE: ORG-MODE Playground
 #+AUTHOR: slashsbin
+#+EMAIL: shokri.md@gmail.com
 #+STARTUP: align
 
 
@@ -98,6 +99,26 @@ Verse Block
 #+end_verse
 
 
+** Tables
+
+*** Simple
+| Name  | Phone | Age |
+|-------+-------+-----|
+| Peter |  1234 |  17 |
+| Anna  |  4321 |  25 |
+
+*** More Advanced
+
+#+CAPTION: Items colors and count
+|------+---------+---------+-------|
+| Item | Color A | Color B | Count |
+|------+---------+---------+-------|
+| <c>  |     <r> | <l>     |  <c>  |
+|  /   |       < | >       |  <>   |
+|  A   |    Blue | Green   |   4   |
+|  B   |   Black | White   |   8   |
+|------+---------+---------+-------|
+
 ** Markup for Rich Contents
 
 *** Paragraphs
@@ -125,12 +146,12 @@ but not any simpler ---Albert Einstein
 If you would like to center some text:
 #+BEGIN_CENTER
 Everything should be made as simple as possible, \\
-but not any simpler
+but not any simpler.
 #+END_CENTER
 
 *** Emphasis and Monospace
 You can make words *bold*, /italic/, _underlined_, =verbatim= and ~code~, and, if you must, +strike-through+.
 
 *** Subscripts and Superscripts
-The radius of the sun is R_sun = 6.96 x 10^8 m.  On the other hand,
+The radius of the sun is R_sun = 6.96 x 10^8 m.  On the other hand, \\
 the radius of Alpha Centauri is R_{Alpha Centauri} = 1.28 x R_{sun}.
