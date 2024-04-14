@@ -4,111 +4,83 @@
 #+STARTUP: align
 
 
-* Org-Mode Playground
-
+* Org-Mode Playground (Lvl 1)
 ** Metadata
-A.K.A Front formatter which should be rendered at top of the page.
-
-
-** Document Structure
-
-*** Headlines
-
-**** Sub Headline - Level 4
-
-***** Sub Headline - Level 5
-
-****** Sub Headline - Level 6
-
-******* Sub Headline - Level 7
-
-******** Sub Headline - Level 8
-
+Notice the metadata (aka front-matter) which should be rendered at top of the page.
+** Document Structure (Lvl 2)
+*** Headlines (Lvl 3)
+**** Sub Headline (Lvl 4)
+***** Sub Headline (Lvl 5)
+****** Sub Headline (Lvl 6)
+******* Sub Headline (Lvl 7)
+******** Sub Headline (Lvl 8)
 *** Visibility
-    :PROPERTIES:
-    :VISIBILITY: folded
-    :END:
-
+:PROPERTIES:
+:VISIBILITY: folded
+:END:
 Initial visibility is set for this section to ~folded~ via a special custom property.
-
 *** Plain Lists
-
 **** Unordered list
-
-With minus bullets:
+***** With minus bullets
 - Item A
 - Item B
 - Item C
 - Item D
-
-With plus bullets:
+***** With plus bullets
 + Item A
 + Item B
 + Item C
 + Item D
-
 **** Ordered list
-
-With period:
+***** With periods
 1. Item 1
 2. Item 2
 3. Item 3
 4. Item 4
-
-With parenthesis:
+***** With parenthesis
 1) Item 1
 2) Item 2
 3) Item 3
 4) Item 4
-
-With alphabets:
+***** With alphabets
 A) Item 1
 B) Item 2
 C) Item 3
 D) Item 4
-
 **** Description list
-
-Unordered list:
+***** Unordered list
 - Item A :: An item that is the 1st
 - Item B :: An item that is the 2nd
-
 *** Drawers
 Still outside the drawer.
 :DRAWERNAME:
 This is inside the drawer.
 :END:
 After the drawer.
-
 *** Blocks
-
+**** Center
 #+begin_center
 Center Block
 #+end_center
-
+**** Comment
 #+begin_comment
 Comment Block
 #+end_comment
-
+**** Quote
 #+begin_quote
 Quote Block
 #+end_quote
-
+**** Verse
 #+begin_verse
 Verse Block
 #+end_verse
-
-
 ** Tables
-
 *** Simple
 | Name  | Phone | Age |
 |-------+-------+-----|
 | Peter |  1234 |  17 |
 | Anna  |  4321 |  25 |
-
 *** More Advanced
-
 #+CAPTION: Items colors and count
 |------+---------+---------+-------|
 | Item | Color A | Color B | Count |
@@ -118,11 +90,83 @@ Verse Block
 |  A   |    Blue | Green   |   4   |
 |  B   |   Black | White   |   8   |
 |------+---------+---------+-------|
+** Hyperlinks
+*** Internal links
+A [[#my-custom-id][link]] to my CD collection. Another [[My CD collection][link]] to my CD collection.
+*** External Links
+https://slashsbin.dev
+file:README.org
+./README.org
+info:org#Hyperlinks
+** TODO Items [20%]
+*** Item without a state cookie
+*** TODO [#A] Work to be done with high priority
+*** TODO [#C] Work to be done with low priority
+*** DONE Already finished work
+*** TODO Parent Item with sub-tasks [1/3]
+**** TODO First sub-task
+**** DONE Second sub-task which is done
+**** TODO Third sub-task
+*** TODO Plain list with checkboxes [1/4]
+- [-] Item A
+- [ ] Item B
+- [X] Item C
+- [ ] Item D
+** Tags
+*** Item A with tag ~@blue~                                           :@blue:
+*** Item B with tags ~@blue~ and ~@green~                      :@blue:@green:
+** Properties
+Properties are key-value pairs associated with an entry. They live in a special drawer with the name ‘PROPERTIES’.
+*** Goldberg Variations
+:PROPERTIES:
+:Title: Goldberg Variations
+:Composer: J.S. Bach
+:Publisher: Deutsche Grammophon
+:NDisks: 1
+:END:
+*** My CD collection
+:PROPERTIES:
+:NDisks_ALL: 1 2 3 4
+:Publisher_ALL: "Deutsche Grammophon" Philips EMI
+:CUSTOM_ID: my-custom-id
+:END:
+** Dates and Times
+*** Timestamps
+**** Meet Peter at the movies
+<2006-11-01 Wed 19:15>
+**** Discussion on climate change
+<2006-11-02 Thu 20:00-22:00>
+**** Pick up Sam at school
+<2007-05-16 Wed 12:30 +1w>
+**** 22:00-23:00 The nerd meeting on every 2nd Thursday of the month
+<%%(diary-float t 4 2)>
+**** Meeting in Amsterdam
+<2004-08-23 Mon>--<2004-08-26 Thu>
+**** Gillian comes late for the fifth time
+[2006-11-01 Wed]
+*** Deadlines and Scheduling
+**** TODO write article about the Earth for the Guide
+DEADLINE: <2004-02-29 Sun>
+**** TODO Call Trillian for a date on New Years Eve
+SCHEDULED: <2004-12-25 Sat>
+*** Clocking Work Time
+:LOGBOOK:
+CLOCK: [2006-11-02 Thu 00:00]--[2006-11-02 Thu 01:50] =>  1:50
+CLOCK: [2006-11-01 Wed 00:00]--[2006-11-01 Wed 03:40] =>  3:40
+:END:
 
+#+BEGIN: clocktable :scope file :maxlevel 3 :block 2006-11 :emphasize t :indent t :tcolumns 2 :level t
+#+CAPTION: Clock summary at [2024-04-13 Sat 09:28], for November 2006.
+| L | Headline                      | Time   |        |
+|---+-------------------------------+--------+--------|
+|   | *Total time*                  | *5:30* |        |
+|---+-------------------------------+--------+--------|
+| 1 | *Org-Mode Playground (Lvl 1)* | *5:30* |        |
+| 2 | \_  /Dates and Times/         |        | /5:30/ |
+| 3 | \_    Clocking Work Time      |        |   5:30 |
+#+END:
 ** Markup for Rich Contents
-
 *** Paragraphs
-
 Paragraphs are separated by at least one empty line.
 
 A paragraph with enforced line \\
@@ -148,10 +192,27 @@ If you would like to center some text:
 Everything should be made as simple as possible, \\
 but not any simpler.
 #+END_CENTER
-
 *** Emphasis and Monospace
 You can make words *bold*, /italic/, _underlined_, =verbatim= and ~code~, and, if you must, +strike-through+.
-
 *** Subscripts and Superscripts
 The radius of the sun is R_sun = 6.96 x 10^8 m.  On the other hand, \\
 the radius of Alpha Centauri is R_{Alpha Centauri} = 1.28 x R_{sun}.
+*** Special Symbols
+Pro tip: Given a circle \Gamma of diameter d, the length of its
+circumference is \pi{}d.
+*** Literal examples
+#+BEGIN_EXAMPLE
+  Some example from a text file.
+#+END_EXAMPLE
+
+Here is an example
+   : Some example from a text file.
+
+#+BEGIN_SRC emacs-lisp
+  (defun org-xor (a b)
+    "Exclusive or."
+    (if a (not b) b))
+ #+END_SRC
+*** Horizontal Rules
+A line consisting of only dashes, and at least 5 of them, is exported as a horizontal line. Like this:
+-----
