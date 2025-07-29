@@ -1,6 +1,5 @@
 #+TITLE: ORG-MODE Playground
 #+AUTHOR: slashsbin
-#+EMAIL: shokri.md@gmail.com
 #+STARTUP: align
 
 
